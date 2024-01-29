@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo;
+package org.tutorial.yy.langchain.service;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;

@@ -2,7 +2,7 @@ package org.tutorial.yy.langchain.demo.aiservice.extractor;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
-import org.tutorial.yy.langchain.demo.LangModel;
+import org.tutorial.yy.langchain.service.LangModel;
 
 /**
  * @author yyHuangfu
