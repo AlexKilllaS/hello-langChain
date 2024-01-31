@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.aiservice.classifier;
+package org.tutorial.yy.langchain.demo.openAI.aiservice.classifier;
 
 import dev.langchain4j.service.UserMessage;
 

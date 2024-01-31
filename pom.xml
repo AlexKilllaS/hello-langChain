@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <langChain.version>0.25.0</langChain.version>
+        <langChain.version>0.26.0</langChain.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +25,11 @@
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-open-ai</artifactId>
+            <version>${langChain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-qianfan</artifactId>
             <version>${langChain.version}</version>
         </dependency>
     </dependencies>

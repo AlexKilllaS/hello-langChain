@@ -2,7 +2,7 @@ package org.tutorial.yy.langchain.service;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
-import org.tutorial.yy.langchain.service.ApiKeys;
+import dev.langchain4j.model.qianfan.QianfanChatModel;
 
 /**
  * @author yyHuangfu
@@ -10,7 +10,15 @@ import org.tutorial.yy.langchain.service.ApiKeys;
  * @description
  */
 public class LangModel {
-    public static ChatLanguageModel getChatModel() {
+    public static ChatLanguageModel getOpenAIModel() {
         return OpenAiChatModel.withApiKey(ApiKeys.OPENAI_API_KEY);
+    }
+
+    public static QianfanChatModel getQianFanModel() {
+        return QianfanChatModel.builder()
+                .apiKey("bUyk2k96KQ2gG1ZQ8TB8t3cd")
+                .secretKey(ApiKeys.QIAN_FAN_API_KEY)
+                .modelName("Yi-34B-Chat")
+                .build();
     }
 }

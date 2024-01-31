@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.aiservice.classifier;
+package org.tutorial.yy.langchain.demo.openAI.aiservice.classifier;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
@@ -11,7 +11,7 @@ import org.tutorial.yy.langchain.service.LangModel;
  */
 public class HelloClassifier {
     public static void main(String[] args) {
-        ChatLanguageModel model = LangModel.getChatModel();
+        ChatLanguageModel model = LangModel.getOpenAIModel();
         SentimentAnalyzer sentimentAnalyzer = AiServices.create(SentimentAnalyzer.class, model);
 
         Sentiment sentiment = sentimentAnalyzer.analyzeSentimentOf("It is good!");

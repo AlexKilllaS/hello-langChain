@@ -12,4 +12,5 @@ public class ApiKeys {
     // You can get your own Judge0 RapidAPI key here: https://rapidapi.com/judge0-official/api/judge0-ce
     public static final String RAPID_API_KEY = System.getenv("RAPID_API_KEY");
 
+    public static final String QIAN_FAN_API_KEY = System.getenv("QIAN_FAN_API_KEY");
 }
