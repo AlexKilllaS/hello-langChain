@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.openAI.aiservice.extractor;
+package org.tutorial.yy.langchain.demo.aiservice.extractor;
 
 import java.time.LocalDate;
 

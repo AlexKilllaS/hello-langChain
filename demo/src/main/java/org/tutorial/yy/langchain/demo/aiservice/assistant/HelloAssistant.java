@@ -1,8 +1,9 @@
-package org.tutorial.yy.langchain.demo.openAI.aiservice.assistant;
+package org.tutorial.yy.langchain.demo.aiservice.assistant;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
-import org.tutorial.yy.langchain.service.LangModel;
+
+import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
 
 /**
  * @author yyHuangfu
@@ -11,10 +12,10 @@ import org.tutorial.yy.langchain.service.LangModel;
  */
 public class HelloAssistant {
     public static void main(String[] args) {
-        ChatLanguageModel model = LangModel.getOpenAIModel();
+        ChatLanguageModel model = getModel();
 
         Assistant assistant = AiServices.create(Assistant.class, model);
-        String answer = assistant.chat("Hello");
+        String answer = assistant.chat("你好");
 
         System.out.println(answer);
     }

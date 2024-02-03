@@ -1,17 +1,17 @@
-package org.tutorial.yy.langchain.demo.openAI.aiservice.extractor;
+package org.tutorial.yy.langchain.demo.aiservice.extractor;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
-import org.tutorial.yy.langchain.service.LangModel;
+import org.tutorial.yy.langchain.demo.aiservice.LangChainBase;
 
 /**
  * @author yyHuangfu
  * @create 2024/1/29
  * @description
  */
-public class HelloExtractor {
+public class HelloExtractor extends LangChainBase {
     public static void main(String[] args) {
-        ChatLanguageModel model = LangModel.getOpenAIModel();
+        ChatLanguageModel model = getModel();
         PersonExtractor extractor = AiServices.create(PersonExtractor.class, model);
 
         String text = "In 1968, amidst the fading echoes of Independence Day, "

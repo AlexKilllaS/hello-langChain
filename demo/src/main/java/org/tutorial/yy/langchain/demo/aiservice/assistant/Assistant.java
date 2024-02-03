@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.openAI.aiservice.assistant;
+package org.tutorial.yy.langchain.demo.aiservice.assistant;
 
 /**
  * @author yyHuangfu
