@@ -10,13 +10,19 @@
     <packaging>pom</packaging>
 
     <properties>
-        <langChain.version>0.26.0</langChain.version>
+        <java.version>8</java.version>
+        <langChain.version>0.26.1</langChain.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.18</version>
+        </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j</artifactId>
@@ -35,8 +41,9 @@
     </dependencies>
 
     <modules>
-        <module>demo</module>
-        <module>service</module>
+        <module>hello-langchain-demo</module>
+        <module>hello-langchain-service</module>
+        <module>hello-langchain-spring</module>
     </modules>
 
 </project>
