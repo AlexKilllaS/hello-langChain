@@ -8,7 +8,6 @@
         <artifactId>hello-langChain</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>hello-langchain-spring</artifactId>
 
     <properties>
@@ -17,4 +16,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.tutorial.yy</groupId>
+            <artifactId>hello-langchain-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>
