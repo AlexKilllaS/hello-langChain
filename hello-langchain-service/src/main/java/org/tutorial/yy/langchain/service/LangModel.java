@@ -2,7 +2,9 @@ package org.tutorial.yy.langchain.service;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.model.qianfan.QianfanChatModel;
+import dev.langchain4j.model.qianfan.QianfanStreamingChatModel;
 
 import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_3_5_TURBO;
 import static java.time.Duration.ofSeconds;
@@ -33,6 +35,14 @@ public class LangModel {
                 .timeout(ofSeconds(60))
                 .logRequests(true)
                 .logResponses(true)
+                .build();
+    }
+
+    public static QianfanStreamingChatModel getStreamModel() {
+        return QianfanStreamingChatModel.builder()
+                .apiKey("bUyk2k96KQ2gG1ZQ8TB8t3cd")
+                .secretKey(ApiKeys.QIAN_FAN_API_KEY)
+                .modelName("Yi-34B-Chat")
                 .build();
     }
 
