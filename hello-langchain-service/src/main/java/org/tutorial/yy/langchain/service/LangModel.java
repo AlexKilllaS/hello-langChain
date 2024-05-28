@@ -1,12 +1,14 @@
 package org.tutorial.yy.langchain.service;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import dev.langchain4j.model.qianfan.QianfanChatModel;
 import dev.langchain4j.model.qianfan.QianfanStreamingChatModel;
 
 import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_3_5_TURBO;
+import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_3_5_TURBO_16K;
 import static java.time.Duration.ofSeconds;
 
 /**
@@ -15,6 +17,8 @@ import static java.time.Duration.ofSeconds;
  * @description
  */
 public class LangModel {
+
+    private static String QIAN_FAN_API_KEY = "9EsW0vKxbr3zU3CBkR9mc6ZN";
 
     public static ChatLanguageModel getModel(String modelName) {
         switch (modelName) {
@@ -40,17 +44,30 @@ public class LangModel {
 
     public static QianfanStreamingChatModel getStreamModel() {
         return QianfanStreamingChatModel.builder()
-                .apiKey("bUyk2k96KQ2gG1ZQ8TB8t3cd")
+                .apiKey(QIAN_FAN_API_KEY)
                 .secretKey(ApiKeys.QIAN_FAN_API_KEY)
+                .temperature(0.6)
                 .modelName("Yi-34B-Chat")
+                .logRequests(true)
+                .logResponses(true)
                 .build();
     }
 
     private static QianfanChatModel getQianFanModel() {
         return QianfanChatModel.builder()
-                .apiKey("bUyk2k96KQ2gG1ZQ8TB8t3cd")
+                .apiKey(QIAN_FAN_API_KEY)
                 .secretKey(ApiKeys.QIAN_FAN_API_KEY)
+                .temperature(0.6)
                 .modelName("Yi-34B-Chat")
+                .logRequests(true)
+                .logResponses(true)
                 .build();
     }
+
+//    private static ChatLanguageModel getLlama3Model() {
+//        ChatLanguageModel model = OllamaChatModel.builder()
+//                .baseUrl(baseUrl())
+//                .modelName(MODEL_NAME)
+//                .build();
+//    }
 }

@@ -11,7 +11,7 @@ public interface Assistant {
 
     String chat(String userMessage);
 
-    Integer count(String characters);
+    String count(String characters);
 
     Person intro(String question);
 }

@@ -17,11 +17,10 @@ public class HelloAssistant {
 
         Assistant assistant = AiServices.create(Assistant.class, model);
         String answer = assistant.chat("你好");
-        Person person = assistant.intro("介绍一下Kobe Bryant");
-        Integer num = assistant.count("计算字符数：adbcsd");
-
         System.out.println(answer);
+        Person person = assistant.intro("介绍下Kobe Bryant");
         System.out.println(person);
+        String num = assistant.count("计算字符数：adbcsd");
         System.out.println(num);
     }
 }

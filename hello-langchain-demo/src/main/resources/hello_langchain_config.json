@@ -1,3 +1,7 @@
 {
-  "model_provider": "open_ai"
+  "model_provider": "qian_fan",
+  "占位": [
+    "qian_fan",
+    "open_ai"
+  ]
 }

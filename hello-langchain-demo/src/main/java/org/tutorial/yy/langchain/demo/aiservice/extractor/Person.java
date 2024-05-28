@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Person {
     private String firstName;
     private String lastName;
-    private LocalDate birthDate;
+    private String birthDate;
 
     @Override
     public String toString() {
