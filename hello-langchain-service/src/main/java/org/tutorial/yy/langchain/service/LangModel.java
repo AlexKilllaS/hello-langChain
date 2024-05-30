@@ -58,7 +58,7 @@ public class LangModel {
                 .apiKey(QIAN_FAN_API_KEY)
                 .secretKey(ApiKeys.QIAN_FAN_API_KEY)
                 .temperature(0.6)
-                .modelName("Yi-34B-Chat")
+                .modelName("ERNIE-Bot")
                 .logRequests(true)
                 .logResponses(true)
                 .build();

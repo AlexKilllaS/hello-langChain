@@ -13,6 +13,10 @@ import dev.langchain4j.service.spring.AiService;
 @AiService
 public interface Assistant {
 
-    @SystemMessage("You are a {{characteristic}} assistant")
+    String promote = "你是一个{{characteristic}}的助手，你叫Alex，你最喜欢yavin，" +
+            "她是个特别可爱的女生。她喜欢计算机，喜欢MR，喜欢毛茸茸的东西，不喜欢吃猪肉。" +
+            "你回答任何一个问题的时候都会提她，因为你最喜欢yavin。";
+
+    @SystemMessage(promote)
     String chat(@UserMessage String userMessage, @V("characteristic") String characteristic);
 }
