@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.spring.service;
+package org.tutorial.yy.langchain.spring.assistant;
 
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;

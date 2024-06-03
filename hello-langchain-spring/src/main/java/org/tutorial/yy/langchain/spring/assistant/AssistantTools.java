@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.spring.service;
+package org.tutorial.yy.langchain.spring.assistant;
 
 import dev.langchain4j.agent.tool.Tool;
 import org.springframework.stereotype.Component;

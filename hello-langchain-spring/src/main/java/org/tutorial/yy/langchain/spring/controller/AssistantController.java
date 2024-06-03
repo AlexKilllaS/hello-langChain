@@ -7,17 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.tutorial.yy.langchain.spring.service.Assistant;
+import org.tutorial.yy.langchain.spring.assistant.Assistant;
+import org.tutorial.yy.langchain.spring.service.AssistantService;
 
 import static org.tutorial.yy.langchain.service.LangModel.getModel;
 
 @RestController
-class AssistantController {
+public class AssistantController {
 
     @Autowired
     Assistant assistant;
 
-    Assistant qianFanAssistant;
+    @Autowired
+    AssistantService assistantService;
+
+    public static Assistant qianFanAssistant;
 
     @PostConstruct
     public void init() {
@@ -32,6 +36,6 @@ class AssistantController {
 
     @GetMapping("/chat")
     public String assistant2(@RequestParam(value = "message", defaultValue = "hello") String message) {
-        return qianFanAssistant.chat(message, "礼貌");
+        return assistantService.chat(message, "礼貌");
     }
 }
