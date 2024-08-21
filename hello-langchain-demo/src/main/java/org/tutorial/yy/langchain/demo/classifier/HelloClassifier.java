@@ -1,9 +1,10 @@
-package org.tutorial.yy.langchain.demo.aiservice.classifier;
+package org.tutorial.yy.langchain.demo.classifier;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
 
-import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
+import static org.tutorial.yy.langchain.demo.LangChainBase.getModel;
+
 
 /**
  * @author yyHuangfu
@@ -13,9 +14,9 @@ import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
 public class HelloClassifier {
     public static void main(String[] args) {
         ChatLanguageModel model = getModel();
-        SentimentAnalyzer sentimentAnalyzer = AiServices.create(SentimentAnalyzer.class, model);
+        org.tutorial.yy.langchain.demo.classifier.SentimentAnalyzer sentimentAnalyzer = AiServices.create(org.tutorial.yy.langchain.demo.classifier.SentimentAnalyzer.class, model);
 
-        Sentiment sentiment = sentimentAnalyzer.analyzeSentimentOf("It is good!");
+        org.tutorial.yy.langchain.demo.aiservice.classifier.Sentiment sentiment = sentimentAnalyzer.analyzeSentimentOf("It is good!");
         // POSITIVE
         boolean positive = sentimentAnalyzer.isPositive("It is bad!");
         // false

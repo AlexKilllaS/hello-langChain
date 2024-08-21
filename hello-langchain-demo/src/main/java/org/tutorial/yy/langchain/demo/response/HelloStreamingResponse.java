@@ -1,10 +1,10 @@
-package org.tutorial.yy.langchain.demo.aiservice.response;
+package org.tutorial.yy.langchain.demo.response;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.model.StreamingResponseHandler;
 import dev.langchain4j.model.output.Response;
 import dev.langchain4j.model.qianfan.QianfanStreamingChatModel;
-import org.tutorial.yy.langchain.demo.aiservice.LangChainBase;
+import org.tutorial.yy.langchain.demo.LangChainBase;
 
 public class HelloStreamingResponse extends LangChainBase {
 

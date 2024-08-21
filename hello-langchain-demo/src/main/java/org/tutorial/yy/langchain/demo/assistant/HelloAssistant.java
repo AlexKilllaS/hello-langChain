@@ -1,10 +1,11 @@
-package org.tutorial.yy.langchain.demo.aiservice.assistant;
+package org.tutorial.yy.langchain.demo.assistant;
 
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.service.AiServices;
-import org.tutorial.yy.langchain.demo.aiservice.extractor.Person;
+import org.tutorial.yy.langchain.demo.extractor.Person;
 
-import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
+import static org.tutorial.yy.langchain.demo.LangChainBase.getModel;
+
 
 /**
  * @author yyHuangfu

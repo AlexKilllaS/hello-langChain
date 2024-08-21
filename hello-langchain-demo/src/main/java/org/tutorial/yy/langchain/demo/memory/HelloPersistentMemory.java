@@ -1,10 +1,11 @@
-package org.tutorial.yy.langchain.demo.aiservice.memory;
+package org.tutorial.yy.langchain.demo.memory;
 
 import dev.langchain4j.memory.chat.ChatMemoryProvider;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.service.AiServices;
 import org.tutorial.yy.langchain.service.db.PersistentChatMemoryStore;
-import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
+
+import static org.tutorial.yy.langchain.demo.LangChainBase.getModel;
 
 /**
  * @author yyHuangfu
@@ -23,7 +24,7 @@ public class HelloPersistentMemory {
                 .chatMemoryStore(store)
                 .build();
 
-        Assistant assistant = AiServices.builder(Assistant.class)
+        org.tutorial.yy.langchain.demo.aiservice.memory.Assistant assistant = AiServices.builder(org.tutorial.yy.langchain.demo.aiservice.memory.Assistant.class)
                 .chatLanguageModel(getModel())
                 .chatMemoryProvider(chatMemoryProvider)
                 .build();

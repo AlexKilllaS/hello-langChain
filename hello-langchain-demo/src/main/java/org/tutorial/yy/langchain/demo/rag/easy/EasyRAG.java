@@ -14,7 +14,7 @@ import org.tutorial.yy.langchain.demo.rag.shared.Assistant;
 import java.util.List;
 
 import static dev.langchain4j.data.document.loader.FileSystemDocumentLoader.loadDocuments;
-import static org.tutorial.yy.langchain.demo.aiservice.LangChainBase.getModel;
+import static org.tutorial.yy.langchain.demo.LangChainBase.getModel;
 import static org.tutorial.yy.langchain.demo.rag.shared.Utils.*;
 
 /**

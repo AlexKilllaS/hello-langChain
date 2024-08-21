@@ -11,10 +11,8 @@
     <artifactId>hello-langchain-spring</artifactId>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <spring.version>3.2.4</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <lanchain4j.spring-boot-starter.version>0.31.0</lanchain4j.spring-boot-starter.version>
     </properties>
 
     <dependencies>
@@ -26,17 +24,17 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.2.4</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-spring-boot-starter</artifactId>
-            <version>${lanchain4j.spring-boot-starter.version}</version>
+            <version>${langChain.version}</version>
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
-            <version>${lanchain4j.spring-boot-starter.version}</version>
+            <version>${langChain.version}</version>
         </dependency>
     </dependencies>
 
@@ -45,6 +43,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.version}</version>
                 <executions>
                     <execution>
                         <goals>

@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.aiservice.extractor;
+package org.tutorial.yy.langchain.demo.extractor;
 
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;

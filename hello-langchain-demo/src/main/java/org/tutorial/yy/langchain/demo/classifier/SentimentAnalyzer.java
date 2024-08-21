@@ -1,4 +1,4 @@
-package org.tutorial.yy.langchain.demo.aiservice.classifier;
+package org.tutorial.yy.langchain.demo.classifier;
 
 import dev.langchain4j.service.UserMessage;
 
@@ -9,7 +9,7 @@ import dev.langchain4j.service.UserMessage;
  */
 public interface SentimentAnalyzer {
     @UserMessage("Analyze sentiment of {{it}}")
-    Sentiment analyzeSentimentOf(String text);
+    org.tutorial.yy.langchain.demo.aiservice.classifier.Sentiment analyzeSentimentOf(String text);
 
     @UserMessage("Does {{it}} have a positive sentiment?")
     boolean isPositive(String text);

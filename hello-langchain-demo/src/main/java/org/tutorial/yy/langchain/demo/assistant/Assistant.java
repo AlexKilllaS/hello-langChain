@@ -1,6 +1,6 @@
-package org.tutorial.yy.langchain.demo.aiservice.assistant;
+package org.tutorial.yy.langchain.demo.assistant;
 
-import org.tutorial.yy.langchain.demo.aiservice.extractor.Person;
+import org.tutorial.yy.langchain.demo.extractor.Person;
 
 /**
  * @author yyHuangfu

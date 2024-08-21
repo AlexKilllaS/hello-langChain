@@ -10,10 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>8</java.version>
-        <langChain.version>0.30.0</langChain.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <langChain.version>0.33.0</langChain.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

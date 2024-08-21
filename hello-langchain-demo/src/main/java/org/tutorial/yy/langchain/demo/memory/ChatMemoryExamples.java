@@ -1,20 +1,21 @@
-package org.tutorial.yy.langchain.demo.aiservice.memory;
+package org.tutorial.yy.langchain.demo.memory;
 
 import dev.langchain4j.chain.ConversationalChain;
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
-import org.tutorial.yy.langchain.demo.aiservice.LangChainBase;
+import org.tutorial.yy.langchain.demo.LangChainBase;
 
 import java.io.IOException;
 
 import static dev.langchain4j.data.message.UserMessage.userMessage;
+import static org.tutorial.yy.langchain.demo.LangChainBase.getModel;
 
 /**
  * @author yyHuangfu
  * @create 2024/2/3
  * @description
  */
-public class HelloChatMemory extends LangChainBase {
+public class ChatMemoryExamples extends LangChainBase {
     public static void main(String[] args) throws IOException {
 
         ConversationalChain chain = ConversationalChain.builder()
